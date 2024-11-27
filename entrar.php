@@ -1,37 +1,3 @@
-<?php
-    include('../settings/authdb.php');
-
-    if (isset($_POST['username']) || isset($_POST['password'])) {
-        if (strlen($_POST['username'] === 0)) {
-            echo "Erro: PREENCHA O SEU USUARIO!";
-        } else if (strlen($_POST['password'] === 0)) {
-            echo "Erro: PREENCHA A SUA SENHA!";
-        } else {
-            $user = $_POST['username'];
-            $pass = $_POST['password'];
-
-            $ver = "SELECT * FROM users_adm WHERE username = '$user' AND password = '$pass'";
-            $runver = $conn->query($ver) or die("[-] Erro na execução do código SQL: " . $conn->error);
-
-            $encontrou = $runver->num_rows;
-            if ($encontrou == 1) {
-                $usuario = $runver->fetch_assoc();
-
-                if (!isset($_SESSION)) {
-                    session_start();
-                }
-
-                $_SESSION['id'] = $usuario['id'];
-                $_SESSION['user'] = $usuario['username'];
-
-                header("Location: dashboard.php");
-
-            } else {
-                echo "Falha ao logar! Usuário ou senha incorretos."; 
-            }
-        }
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +28,7 @@
         </div>
     </div>
 
-    <?php include '../includes/footer.php'; ?>
+    <?php include './includes/footer.php'; ?>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

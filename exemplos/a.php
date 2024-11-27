@@ -24,8 +24,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Cardápio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="entrar.php">Entrar</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./minha-conta/settings.php">Minha conta</a></li>
+                                <li><a class="dropdown-item" href="./minha-conta/pedidos.php">Meus pedidos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="./minha-conta/logout.php">Sair</a></li>
+                            </ul>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
