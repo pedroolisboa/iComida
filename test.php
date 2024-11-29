@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iComida - Cardápio</title>
     <style>
-        /* Estilo para limitar o tamanho das imagens dos cards */
         .card-img-top {
             width: 100%;
             height: 200px;
