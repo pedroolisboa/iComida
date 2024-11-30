@@ -23,7 +23,7 @@ include('./settings/authdb.php');
     
                     header("Location: ./index.php");
                 } else {
-                    echo "Falha ao logar! Usuário ou senha incorretos."; 
+                    echo "Falha ao logar! Email ou senha incorretos."; 
                 }
             }
 
